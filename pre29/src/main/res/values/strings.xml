@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android10Snippet</string>
+    <string name="app_name">Android10Snippet-pre29</string>
 
     <!-- fragment labels -->
     <string name="admin_info_fragment_label">Administrator Info</string>

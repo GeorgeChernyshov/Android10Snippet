@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Android10Snippet"
-include ':app'
+include ':pre29'
+include ':post29'
