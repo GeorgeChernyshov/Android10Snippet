@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Android10Snippet</string>
+
+    <!-- fragment labels -->
+    <string name="admin_info_fragment_label">Administrator Info</string>
+    <string name="identifiers_fragment_label">Identifiers and Data</string>
+
+    <!-- button labels -->
+    <string name="get_contacts_button">Get contacts</string>
+
+    <!-- field labels -->
+    <string name="actual_mac_address">Randomized MAC address</string>
+    <string name="connection_owner_uid">Connection owners unique identifier</string>
+    <string name="randomized_mac_address">Randomized MAC address</string>
+    <string name="used_mac_address">MAC address used</string>
+
+    <!-- admin -->
+    <string name="sample_device_admin">admin</string>
+    <string name="sample_device_admin_description">admin</string>
+    <string name="go_to_admin">Go to admin</string>
+    <string name="activate_admin">Activate admin mode</string>
+
+    <!-- error -->
+    <string name="proc_net_not_available">/proc/net access not available on Android 10+</string>
+</resources>
