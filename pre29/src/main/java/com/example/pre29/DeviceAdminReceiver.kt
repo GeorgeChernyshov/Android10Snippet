@@ -1,4 +1,4 @@
-package com.example.android10snippet
+package com.example.pre29
 
 class DeviceAdminReceiver : android.app.admin.DeviceAdminReceiver() {
 }

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.post29'
-    compileSdk 33
+    compileSdk 29
 
     defaultConfig {
         applicationId "com.example.post29"
         minSdk 24
-        targetSdk 33
+        targetSdk 29
         versionCode 1
         versionName "1.0"
 
@@ -30,14 +30,21 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
+    //navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 }

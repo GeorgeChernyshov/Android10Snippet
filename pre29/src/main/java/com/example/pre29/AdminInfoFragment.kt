@@ -1,14 +1,11 @@
-package com.example.android10snippet
+package com.example.pre29
 
-import android.app.admin.DeviceAdminReceiver
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.android10snippet.databinding.FragmentAdminInfoBinding
-import java.net.NetworkInterface
+import com.example.pre29.databinding.FragmentAdminInfoBinding
 
 class AdminInfoFragment : Fragment() {
 

@@ -10,6 +10,7 @@
 
     <!-- field labels -->
     <string name="actual_mac_address">Randomized MAC address</string>
+    <string name="build_serial">Build Serial</string>
     <string name="connection_owner_uid">Connection owners unique identifier</string>
     <string name="randomized_mac_address">Randomized MAC address</string>
     <string name="used_mac_address">MAC address used</string>
@@ -21,5 +22,6 @@
     <string name="activate_admin">Activate admin mode</string>
 
     <!-- error -->
-    <string name="proc_net_not_available">/proc/net access not available on Android 10+</string>
+    <string name="error_build_serial_not_implemented">Build Serial only available after Android Oreo</string>
+    <string name="error_proc_net_not_available">/proc/net access not available on Android 10+</string>
 </resources>

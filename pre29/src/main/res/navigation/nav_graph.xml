@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/IdentifiersFragment"
-        android:name="com.example.android10snippet.IdentifiersFragment"
+        android:name="com.example.pre29.IdentifiersFragment"
         android:label="@string/identifiers_fragment_label"
         tools:layout="@layout/fragment_identifiers">
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/AdminInfoFragment"
-        android:name="com.example.android10snippet.AdminInfoFragment"
+        android:name="com.example.pre29.AdminInfoFragment"
         android:label="@string/identifiers_fragment_label"
         tools:layout="@layout/fragment_admin_info" />
 

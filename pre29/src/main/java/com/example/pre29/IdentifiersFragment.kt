@@ -1,12 +1,11 @@
-package com.example.android10snippet
+package com.example.pre29
 
 import android.Manifest
 import android.app.admin.DevicePolicyManager
-import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
+import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.view.LayoutInflater
@@ -14,14 +13,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SimpleCursorAdapter
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import androidx.navigation.fragment.findNavController
-import com.example.android10snippet.databinding.FragmentIdentifiersBinding
+import com.example.pre29.databinding.FragmentIdentifiersBinding
 import java.io.File
 import java.lang.Exception
 
@@ -41,6 +39,9 @@ class IdentifiersFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentIdentifiersBinding.inflate(inflater, container, false)
+
+        requestPermission(Manifest.permission.READ_CONTACTS)
+        requestPermission(Manifest.permission.READ_PHONE_STATE)
 
         binding.activateAdminButton.setOnClickListener {
             val intent = Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN).apply {
@@ -65,7 +66,8 @@ class IdentifiersFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
                 else -> {
                     val mainActivity = requireActivity() as MainActivity
                     mainActivity.requestPermissionLauncher.launch(
-                        Manifest.permission.READ_CONTACTS)
+                        Manifest.permission.READ_CONTACTS
+                    )
                 }
             }
         }
@@ -75,6 +77,7 @@ class IdentifiersFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         }
 
         binding.connectionUidTextView.text = getConnectionOwnerUid()
+        binding.serialTextView.text = getBuildSerial()
 
         return binding.root
     }
@@ -118,17 +121,37 @@ class IdentifiersFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         cursorAdapter?.swapCursor(null)
     }
 
-    private fun getConnectionOwnerUid(): String {
-        // Update to use ConnectivityManager and for old version to return correct values
-        try {
-            val file = File(PROC_FILE)
-            return file.readLines().drop(1)
-                .map { line -> line.trim().split("\\s+") }
-                .filter { it.size > INDEX_UID_COL }
-                .toString()
+    private fun requestPermission(permission: String) {
+        if (
+            ContextCompat.checkSelfPermission(
+                requireContext(),
+                permission
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            val mainActivity = requireActivity() as MainActivity
+            mainActivity.requestPermissionLauncher.launch(permission)
         }
-        catch (ex: Exception) {
-            return getString(R.string.proc_net_not_available)
+    }
+
+    private fun getBuildSerial(): String {
+        return try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                Build.getSerial()
+            else getString(R.string.error_build_serial_not_implemented)
+        }
+        catch (ex: SecurityException) {
+            ex.message.toString()
+        }
+    }
+
+    private fun getConnectionOwnerUid(): String {
+        return try {
+            File(PROC_FILE).readLines()
+                .drop(1)
+                .map { line -> line.trim().split(" ") }
+                .first()[INDEX_UID_COL]
+        } catch (ex: Exception) {
+            getString(R.string.error_proc_net_not_available)
         }
     }
 
@@ -158,6 +181,5 @@ class IdentifiersFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         // Constants needed to fetch connection owner uid
         private const val PROC_FILE = "/proc/net/tcp"
         private const val INDEX_UID_COL = 7
-        private const val INDEX_LOCAL_ADDRESS_COL = 1
     }
 }

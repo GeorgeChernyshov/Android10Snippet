@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.android10snippet'
+    namespace 'com.example.pre29'
     compileSdk 28
 
     defaultConfig {
-        applicationId "com.example.android10snippet"
+        applicationId "com.example.pre29"
         minSdk 23
         targetSdk 28
         versionCode 1

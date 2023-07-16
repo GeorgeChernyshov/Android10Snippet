@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">post29</string>
+    <string name="app_name">Android10Snippet-post29</string>
+
+    <!-- fragment labels -->
+    <string name="identifiers_fragment_label">Identifiers and Data</string>
+
+    <!-- button labels -->
+    <string name="get_contacts_button">Get contacts</string>
+
+    <!-- field labels -->
+    <string name="build_serial">Build Serial</string>
+    <string name="connection_owner_uid">Connection owners unique identifier</string>
+
+    <!-- error -->
+    <string name="error_build_serial_not_available">Build Serial only available for system apps on Android 10+</string>
+    <string name="error_build_serial_not_implemented">Build Serial only available after Android Oreo</string>
+    <string name="error_get_uid_not_available">getConnectionOwnerUid not implemented on Android 9 and lower</string>
 </resources>
