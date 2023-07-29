@@ -15,6 +15,11 @@
             android:id="@+id/action_IdentifiersFragment_to_AdminInfoFragment"
             app:destination="@id/AdminInfoFragment" />
 
+        <action
+            android:id="@+id/action_IdentifiersFragment_to_CameraAndConnectivityFragment"
+            app:destination="@id/CameraAndConnectivityFragment" />
+
+
     </fragment>
 
     <fragment
@@ -22,5 +27,11 @@
         android:name="com.example.pre29.AdminInfoFragment"
         android:label="@string/identifiers_fragment_label"
         tools:layout="@layout/fragment_admin_info" />
+
+    <fragment
+        android:id="@+id/CameraAndConnectivityFragment"
+        android:name="com.example.pre29.CameraAndConnectivityFragment"
+        android:label="@string/camera_fragment_label"
+        tools:layout="@layout/fragment_camera_and_connectivity" />
 
 </navigation>

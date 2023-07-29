@@ -3,14 +3,18 @@
 
     <!-- fragment labels -->
     <string name="admin_info_fragment_label">Administrator Info</string>
+    <string name="camera_fragment_label">Camera and Connectivity</string>
     <string name="identifiers_fragment_label">Identifiers and Data</string>
 
     <!-- button labels -->
     <string name="get_contacts_button">Get contacts</string>
+    <string name="get_clipboard_data">Get clipboard data</string>
+    <string name="go_to_next_screen">Go to next Screen</string>
 
     <!-- field labels -->
     <string name="actual_mac_address">Randomized MAC address</string>
     <string name="build_serial">Build Serial</string>
+    <string name="camera_settings">Camera Settings</string>
     <string name="connection_owner_uid">Connection owners unique identifier</string>
     <string name="randomized_mac_address">Randomized MAC address</string>
     <string name="used_mac_address">MAC address used</string>
@@ -23,5 +27,6 @@
 
     <!-- error -->
     <string name="error_build_serial_not_implemented">Build Serial only available after Android Oreo</string>
+    <string name="error_not_available_common">Not available</string>
     <string name="error_proc_net_not_available">/proc/net access not available on Android 10+</string>
 </resources>

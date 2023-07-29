@@ -43,41 +43,55 @@ class IdentifiersFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
         requestPermission(Manifest.permission.READ_CONTACTS)
         requestPermission(Manifest.permission.READ_PHONE_STATE)
 
-        binding.activateAdminButton.setOnClickListener {
-            val intent = Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN).apply {
-                putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, deviceAdminSample)
-            }
-
-            val mainActivity = requireActivity() as MainActivity
-            mainActivity.requestAdminLauncher.launch(intent)
-        }
-
-        binding.goToAdminInfoButton.isVisible = dpm.isAdminActive(deviceAdminSample)
-
-        binding.getContactsButton.setOnClickListener {
-            when {
-                ContextCompat.checkSelfPermission(
-                    requireContext(),
-                    Manifest.permission.READ_CONTACTS
-                ) == PackageManager.PERMISSION_GRANTED -> {
-                    LoaderManager.getInstance(this).initLoader(0, null, this)
+        with (binding) {
+            activateAdminButton.setOnClickListener {
+                val intent = Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN).apply {
+                    putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, deviceAdminSample)
                 }
 
-                else -> {
-                    val mainActivity = requireActivity() as MainActivity
-                    mainActivity.requestPermissionLauncher.launch(
+                val mainActivity = requireActivity() as MainActivity
+                mainActivity.requestAdminLauncher.launch(intent)
+            }
+
+            goToAdminInfoButton.isVisible = dpm.isAdminActive(deviceAdminSample)
+
+            getContactsButton.setOnClickListener {
+                when {
+                    ContextCompat.checkSelfPermission(
+                        requireContext(),
                         Manifest.permission.READ_CONTACTS
-                    )
+                    ) == PackageManager.PERMISSION_GRANTED -> {
+                        LoaderManager.getInstance(this@IdentifiersFragment)
+                            .initLoader(0, null, this@IdentifiersFragment)
+                    }
+
+                    else -> {
+                        val mainActivity = requireActivity() as MainActivity
+                        mainActivity.requestPermissionLauncher.launch(
+                            Manifest.permission.READ_CONTACTS
+                        )
+                    }
                 }
             }
-        }
 
-        binding.goToAdminInfoButton.setOnClickListener {
-            findNavController().navigate(R.id.action_IdentifiersFragment_to_AdminInfoFragment)
-        }
+            goToAdminInfoButton.setOnClickListener {
+                findNavController().navigate(R.id.action_IdentifiersFragment_to_AdminInfoFragment)
+            }
 
-        binding.connectionUidTextView.text = getConnectionOwnerUid()
-        binding.serialTextView.text = getBuildSerial()
+            connectionUidTextView.text = getConnectionOwnerUid()
+            serialTextView.text = getBuildSerial()
+
+            getClipboardDataButton.setOnClickListener {
+                clipboardDataTextView.text = (activity as? MainActivity)
+                    ?.binder
+                    ?.getClipboardData()
+                    ?: context?.getString(R.string.error_not_available_common)
+            }
+
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(R.id.action_IdentifiersFragment_to_CameraAndConnectivityFragment)
+            }
+        }
 
         return binding.root
     }

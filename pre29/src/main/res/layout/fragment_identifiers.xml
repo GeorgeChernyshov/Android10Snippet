@@ -61,4 +61,26 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/serialTitleTextView"/>
 
+    <Button
+        android:id="@+id/getClipboardDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/get_clipboard_data"
+        app:layout_constraintTop_toBottomOf="@id/serialTextView"/>
+
+    <TextView
+        android:id="@+id/clipboardDataTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/getClipboardDataButton"/>
+
+    <Button
+        android:id="@+id/goToNextScreenButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/go_to_next_screen"
+        app:layout_constraintTop_toBottomOf="@id/clipboardDataTextView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,13 @@
         android:theme="@style/Theme.Android10Snippet"
         tools:targetApi="28">
 
-        <activity android:name="com.example.pre29.MainActivity"
+        <service
+            android:name=".ClipboardService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,17 +30,19 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.example.pre29.DeviceAdminReceiver"
-            android:label="@string/sample_device_admin"
+        <receiver
+            android:name=".DeviceAdminReceiver"
             android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
-            <meta-data android:name="android.app.device_admin"
+            <meta-data
+                android:name="android.app.device_admin"
                 android:resource="@xml/device_admin" />
+
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>
