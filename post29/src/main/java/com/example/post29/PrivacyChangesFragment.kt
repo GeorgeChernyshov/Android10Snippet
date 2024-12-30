@@ -90,6 +90,28 @@ class PrivacyChangesFragment : Fragment() {
                     photoIntentLauncher.launch(intent)
                 }
             }
+
+            backgroundLocationTextView.text = getString(
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+                    R.string.location_permission_needed_hint
+                    else R.string.location_permission_not_needed_hint
+            )
+
+            backgroundLocationButton.setOnClickListener {
+                if (
+                    ContextCompat.checkSelfPermission(
+                        requireContext(),
+                        Manifest.permission.ACCESS_BACKGROUND_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED &&
+                    Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+                ) {
+                    (context as MainActivity).requestPermissionLauncher
+                        .launch(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+                } else {
+                    val intent = Intent(context, LocationService::class.java)
+                    context?.startService(intent)
+                }
+            }
         }
 
         return binding.root

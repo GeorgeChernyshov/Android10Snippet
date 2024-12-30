@@ -72,4 +72,25 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/backgroundLocationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/takePhotosLayout">
+
+        <TextView
+            android:id="@+id/backgroundLocationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/backgroundLocationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/launch_location_service" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

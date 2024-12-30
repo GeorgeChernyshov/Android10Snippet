@@ -10,6 +10,7 @@
     <string name="get_contacts_button">Get contacts</string>
     <string name="give_permission">Give permission</string>
     <string name="go_to_next_screen">Go to next Screen</string>
+    <string name="launch_location_service">Launch location service</string>
     <string name="take_photo">Take Photo</string>
 
     <!-- field labels -->
@@ -25,4 +26,6 @@
     <!-- hints -->
     <string name="access_external_storage_hint">Text from the file in external storage will be here after you press the button.</string>
     <string name="access_private_media_hint">On devices with Android 9 or lower you have to give a permission to read app media files since scoped storage was not really a thing</string>
+    <string name="location_permission_needed_hint">Since Android 10, you will be requested a separate permission for background location</string>
+    <string name="location_permission_not_needed_hint">You shouldn\'t see any permission requests</string>
 </resources>
