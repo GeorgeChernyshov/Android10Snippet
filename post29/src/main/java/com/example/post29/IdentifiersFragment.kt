@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.post29.databinding.FragmentIdentifiersBinding
 import java.net.InetSocketAddress
 
@@ -28,8 +29,16 @@ class IdentifiersFragment : Fragment() {
 
         requestPermission(Manifest.permission.READ_PHONE_STATE)
 
-        binding.connectionUidTextView.text = getConnectionOwnerUid()
-        binding.serialTextView.text = getBuildSerial()
+        with (binding) {
+            connectionUidTextView.text = getConnectionOwnerUid()
+            serialTextView.text = getBuildSerial()
+
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_IdentifiersFragment_to_PrivacyChangesFragment
+                )
+            }
+        }
 
         return binding.root
     }

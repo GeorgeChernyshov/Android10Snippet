@@ -32,6 +32,18 @@
         android:id="@+id/CameraAndConnectivityFragment"
         android:name="com.example.pre29.CameraAndConnectivityFragment"
         android:label="@string/camera_fragment_label"
-        tools:layout="@layout/fragment_camera_and_connectivity" />
+        tools:layout="@layout/fragment_camera_and_connectivity">
+
+        <action
+            android:id="@+id/action_CameraAndConnectivityFragment_to_PrivacyChangesFragment"
+            app:destination="@id/PrivacyChangesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/PrivacyChangesFragment"
+        android:name="com.example.pre29.PrivacyChangesFragment"
+        android:label="@string/privacy_changes_label"
+        tools:layout="@layout/fragment_privacy_changes" />
 
 </navigation>

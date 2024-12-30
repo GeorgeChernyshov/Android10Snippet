@@ -9,6 +9,18 @@
         android:id="@+id/IdentifiersFragment"
         android:name="com.example.post29.IdentifiersFragment"
         android:label="@string/identifiers_fragment_label"
-        tools:layout="@layout/fragment_identifiers"/>
+        tools:layout="@layout/fragment_identifiers">
+
+        <action
+            android:id="@+id/action_IdentifiersFragment_to_PrivacyChangesFragment"
+            app:destination="@id/PrivacyChangesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/PrivacyChangesFragment"
+        android:name="com.example.post29.PrivacyChangesFragment"
+        android:label="@string/privacy_changes_label"
+        tools:layout="@layout/fragment_privacy_changes" />
 
 </navigation>

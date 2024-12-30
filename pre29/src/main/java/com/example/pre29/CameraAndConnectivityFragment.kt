@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.pre29.databinding.FragmentCameraAndConnectivityBinding
 
 class CameraAndConnectivityFragment :Fragment() {
@@ -27,7 +28,15 @@ class CameraAndConnectivityFragment :Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCameraAndConnectivityBinding.inflate(inflater, container, false)
-        binding.cameraSettingsRecycler.adapter = cameraSettingsRecyclerAdapter
+
+        with(binding) {
+            cameraSettingsRecycler.adapter = cameraSettingsRecyclerAdapter
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_CameraAndConnectivityFragment_to_PrivacyChangesFragment
+                )
+            }
+        }
 
         return binding.root
     }

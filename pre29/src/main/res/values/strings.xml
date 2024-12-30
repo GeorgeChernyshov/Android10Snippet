@@ -5,8 +5,10 @@
     <string name="admin_info_fragment_label">Administrator Info</string>
     <string name="camera_fragment_label">Camera and Connectivity</string>
     <string name="identifiers_fragment_label">Identifiers and Data</string>
+    <string name="privacy_changes_label">Top Privacy Changes</string>
 
     <!-- button labels -->
+    <string name="access_external_storage_button">Access External Storage</string>
     <string name="get_contacts_button">Get contacts</string>
     <string name="get_clipboard_data">Get clipboard data</string>
     <string name="go_to_next_screen">Go to next Screen</string>
@@ -29,4 +31,7 @@
     <string name="error_build_serial_not_implemented">Build Serial only available after Android Oreo</string>
     <string name="error_not_available_common">Not available</string>
     <string name="error_proc_net_not_available">/proc/net access not available on Android 10+</string>
+
+    <!-- hints -->
+    <string name="access_external_storage_hint">Text from the file in external storage will be here after you press the button.</string>
 </resources>
