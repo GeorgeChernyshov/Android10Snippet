@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.post29.databinding.FragmentPrivacyChangesBinding
 import java.io.File
 import java.io.IOException
@@ -111,6 +112,12 @@ class PrivacyChangesFragment : Fragment() {
                     val intent = Intent(context, LocationService::class.java)
                     context?.startService(intent)
                 }
+            }
+
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_PrivacyChangesFragment_to_NDKFragment
+                )
             }
         }
 

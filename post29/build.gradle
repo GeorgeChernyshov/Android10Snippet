@@ -6,6 +6,7 @@ plugins {
 android {
     namespace 'com.example.post29'
     compileSdk 29
+    ndkVersion '22.1.7171670'
 
     defaultConfig {
         applicationId "com.example.post29"
@@ -15,6 +16,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+            }
+        }
     }
 
     buildTypes {
@@ -32,6 +39,15 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+    externalNativeBuild {
+        cmake {
+            version '3.18.1'
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+    aaptOptions {
+        noCompress 'bin'
     }
 }
 
