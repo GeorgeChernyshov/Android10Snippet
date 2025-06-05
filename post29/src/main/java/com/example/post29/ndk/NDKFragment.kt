@@ -1,4 +1,4 @@
-package com.example.post29
+package com.example.post29.ndk
 
 import android.os.Build
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.post29.R
 import com.example.post29.databinding.FragmentNdkBinding
 
 class NDKFragment : Fragment() {
@@ -24,6 +26,12 @@ class NDKFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentNdkBinding.inflate(inflater, container, false)
+
+        binding.goToNextScreenButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_NDKFragment_to_SecurityFragment
+            )
+        }
 
         return binding.root
     }

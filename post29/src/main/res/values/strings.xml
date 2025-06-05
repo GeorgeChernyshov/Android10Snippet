@@ -5,6 +5,7 @@
     <string name="identifiers_fragment_label">Identifiers and Data</string>
     <string name="ndk_label">NDK Changes</string>
     <string name="privacy_changes_label">Top Privacy Changes</string>
+    <string name="security_label">Security</string>
 
     <!-- button labels -->
     <string name="access_external_storage_button">Access External Storage</string>
@@ -34,4 +35,12 @@
     <string name="ndk_bionic_symbolic_hint">Bionic libraries use symbolic links as paths</string>
     <string name="ndk_system_binaries_executable">Binaries are in execute-only memory now</string>
     <string name="ndk_system_binaries_read">You can read executable binary files content</string>
+    <string name="security_tls_1_3_hint">Since Android 10, TLS 1.3 is enabled by default</string>
+    <string name="security_tls_cypher_suite">TLS cypher suite</string>
+    <string name="security_tls_cypher_suite_custom">You should see TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 cypher suite</string>
+    <string name="security_tls_cypher_suite_static">Starting with Android 10 TLS cypher suites cannot be customized, so you should see the one chosen by system</string>
+    <string name="security_tls_establish_connection_button">Establish Connection</string>
+    <string name="security_tls_establish_connection_hint">Press this button to establish TLS connection</string>
+    <string name="security_tls_protocol_type">TLS protocol type</string>
+    <string name="security_tls_versions_list">Supported security protocols:</string>
 </resources>

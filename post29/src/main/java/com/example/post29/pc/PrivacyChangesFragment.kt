@@ -1,8 +1,7 @@
-package com.example.post29
+package com.example.post29.pc
 
 import android.Manifest
 import android.app.Activity
-import android.content.ContentResolver
 import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Intent
@@ -11,7 +10,6 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Environment
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +20,8 @@ import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.post29.MainActivity
+import com.example.post29.R
 import com.example.post29.databinding.FragmentPrivacyChangesBinding
 import java.io.File
 import java.io.IOException

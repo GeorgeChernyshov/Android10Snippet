@@ -1,4 +1,4 @@
-package com.example.post29
+package com.example.post29.pc
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

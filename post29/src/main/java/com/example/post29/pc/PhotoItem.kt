@@ -1,9 +1,10 @@
-package com.example.post29
+package com.example.post29.pc
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import com.example.post29.R
 import com.example.post29.databinding.ItemPhotoBinding
 
 class PhotoItem @JvmOverloads constructor(

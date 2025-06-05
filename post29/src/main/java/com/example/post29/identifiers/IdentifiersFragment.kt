@@ -1,4 +1,4 @@
-package com.example.post29
+package com.example.post29.identifiers
 
 import android.Manifest
 import android.content.Context
@@ -6,13 +6,15 @@ import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.os.Build
 import android.os.Bundle
-import android.system.OsConstants.IPPROTO_TCP
+import android.system.OsConstants
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.post29.MainActivity
+import com.example.post29.R
 import com.example.post29.databinding.FragmentIdentifiersBinding
 import java.net.InetSocketAddress
 
@@ -75,7 +77,7 @@ class IdentifiersFragment : Fragment() {
                     .getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
                 connectivityManager.getConnectionOwnerUid(
-                    IPPROTO_TCP,
+                    OsConstants.IPPROTO_TCP,
                     InetSocketAddress(1234),
                     InetSocketAddress(5050)
                 ).toString()
