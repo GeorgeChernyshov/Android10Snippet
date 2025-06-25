@@ -45,6 +45,18 @@
         android:id="@+id/SecurityFragment"
         android:name="com.example.post29.security.SecurityFragment"
         android:label="@string/security_label"
-        tools:layout="@layout/fragment_security" />
+        tools:layout="@layout/fragment_security">
+
+        <action
+            android:id="@+id/action_SecurityFragment_to_WiFiP2PFragment"
+            app:destination="@id/WiFiP2PFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/WiFiP2PFragment"
+        android:name="com.example.post29.wifip2p.WifiPeerToPeerFragment"
+        android:label="@string/wifi_p2p_label"
+        tools:layout="@layout/fragment_wifi_p2p" />
 
 </navigation>

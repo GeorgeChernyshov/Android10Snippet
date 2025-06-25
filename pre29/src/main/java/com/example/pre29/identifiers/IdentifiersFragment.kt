@@ -1,4 +1,4 @@
-package com.example.pre29
+package com.example.pre29.identifiers
 
 import android.Manifest
 import android.app.admin.DevicePolicyManager
@@ -19,6 +19,8 @@ import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import androidx.navigation.fragment.findNavController
+import com.example.pre29.MainActivity
+import com.example.pre29.R
 import com.example.pre29.databinding.FragmentIdentifiersBinding
 import java.io.File
 import java.lang.Exception

@@ -1,9 +1,10 @@
-package com.example.pre29
+package com.example.pre29.camera
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import com.example.pre29.R
 import com.example.pre29.databinding.ItemCameraSettingBinding
 
 class CameraSettingItem @JvmOverloads constructor(

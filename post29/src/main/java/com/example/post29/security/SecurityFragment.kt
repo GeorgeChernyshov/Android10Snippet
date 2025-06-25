@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.post29.R
 import com.example.post29.databinding.FragmentSecurityBinding
 import javax.net.ssl.SSLContext
@@ -50,6 +51,12 @@ class SecurityFragment : Fragment() {
                 tlsConnectionResultTextView.text = task.get()
                 tlsProtocolTypeTextView.text = task.handshakeCompletedListener.protocol
                 tlsCypherSuiteTextView.text = task.handshakeCompletedListener.cipherSuite
+            }
+
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_SecurityFragment_to_WiFiP2PFragment
+                )
             }
         }
     }

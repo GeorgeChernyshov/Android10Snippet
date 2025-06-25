@@ -1,10 +1,12 @@
-package com.example.pre29
+package com.example.pre29.pc
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.pre29.R
 import com.example.pre29.databinding.FragmentPrivacyChangesBinding
 import java.io.File
 
@@ -20,6 +22,12 @@ class PrivacyChangesFragment : Fragment() {
         binding = FragmentPrivacyChangesBinding.inflate(inflater, container, false)
         binding.accessScopedStorageButton.setOnClickListener {
             accessScopedStorage()
+        }
+
+        binding.goToNextScreenButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_PrivacyChangesFragment_to_WiFiP2PFragment
+            )
         }
 
         return binding.root

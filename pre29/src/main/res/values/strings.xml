@@ -6,9 +6,11 @@
     <string name="camera_fragment_label">Camera and Connectivity</string>
     <string name="identifiers_fragment_label">Identifiers and Data</string>
     <string name="privacy_changes_label">Top Privacy Changes</string>
+    <string name="wifi_p2p_label">WiFi Peer to Peer</string>
 
     <!-- button labels -->
     <string name="access_external_storage_button">Access External Storage</string>
+    <string name="connect_to_hotspot">Connect</string>
     <string name="get_contacts_button">Get contacts</string>
     <string name="get_clipboard_data">Get clipboard data</string>
     <string name="go_to_next_screen">Go to next Screen</string>
@@ -34,4 +36,10 @@
 
     <!-- hints -->
     <string name="access_external_storage_hint">Text from the file in external storage will be here after you press the button.</string>
+    <string name="wifi_p2p_connect_to_hotspot_hint">Press this button to connect to the hotspot</string>
+    <string name="wifi_p2p_hint">To test it you will need two devices. You start the hotspot on first device, and on the second one input its ssid it the field below and connect to it</string>
+    <string name="wifi_p2p_input_hint">Input hotspot SSID here</string>
+    <string name="wifi_p2p_password_hint">Input hotspot password here</string>
+    <string name="wifi_p2p_start_hotspot_hint">Press this button to start hotspot</string>
+    <string name="wifi_p2p_title">Android 9 uses old API for establishing WiFi Peer to Peer connections</string>
 </resources>

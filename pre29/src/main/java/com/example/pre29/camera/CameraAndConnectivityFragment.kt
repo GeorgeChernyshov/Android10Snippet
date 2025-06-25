@@ -1,4 +1,4 @@
-package com.example.pre29
+package com.example.pre29.camera
 
 import android.content.Context
 import android.hardware.camera2.CameraCharacteristics
@@ -12,9 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.pre29.R
 import com.example.pre29.databinding.FragmentCameraAndConnectivityBinding
 
-class CameraAndConnectivityFragment :Fragment() {
+class CameraAndConnectivityFragment : Fragment() {
 
     private lateinit var binding: FragmentCameraAndConnectivityBinding
 

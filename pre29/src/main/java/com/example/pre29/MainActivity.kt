@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.IBinder
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pre29.admininfo.DeviceAdminReceiver
 import com.example.pre29.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

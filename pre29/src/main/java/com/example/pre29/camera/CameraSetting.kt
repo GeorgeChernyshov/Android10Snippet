@@ -1,4 +1,4 @@
-package com.example.pre29
+package com.example.pre29.camera
 
 data class CameraSetting(
     val title: String,

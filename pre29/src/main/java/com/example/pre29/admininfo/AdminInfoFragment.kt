@@ -1,10 +1,11 @@
-package com.example.pre29
+package com.example.pre29.admininfo
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.pre29.MainActivity
 import com.example.pre29.databinding.FragmentAdminInfoBinding
 
 class AdminInfoFragment : Fragment() {

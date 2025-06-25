@@ -6,13 +6,16 @@
     <string name="ndk_label">NDK Changes</string>
     <string name="privacy_changes_label">Top Privacy Changes</string>
     <string name="security_label">Security</string>
+    <string name="wifi_p2p_label">WiFi Peer to Peer</string>
 
     <!-- button labels -->
     <string name="access_external_storage_button">Access External Storage</string>
+    <string name="connect_to_hotspot">Connect</string>
     <string name="get_contacts_button">Get contacts</string>
     <string name="give_permission">Give permission</string>
     <string name="go_to_next_screen">Go to next Screen</string>
     <string name="launch_location_service">Launch location service</string>
+    <string name="start_hotspot">Start Hotspot</string>
     <string name="take_photo">Take Photo</string>
 
     <!-- field labels -->
@@ -43,4 +46,10 @@
     <string name="security_tls_establish_connection_hint">Press this button to establish TLS connection</string>
     <string name="security_tls_protocol_type">TLS protocol type</string>
     <string name="security_tls_versions_list">Supported security protocols:</string>
+    <string name="wifi_p2p_connect_to_hotspot_hint">Press this button to connect to the hotspot</string>
+    <string name="wifi_p2p_hint">To test it you will need two devices. You start the hotspot on first device, and on the second one input its ssid it the field below and connect to it</string>
+    <string name="wifi_p2p_input_hint">Input hotspot SSID here</string>
+    <string name="wifi_p2p_password_hint">Input hotspot password here</string>
+    <string name="wifi_p2p_start_hotspot_hint">Press this button to start hotspot</string>
+    <string name="wifi_p2p_title">Android 10 introduced new API for establishing WiFi Peer to Peer connections</string>
 </resources>

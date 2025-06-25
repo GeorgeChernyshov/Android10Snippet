@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
@@ -31,7 +33,7 @@
         </activity>
 
         <receiver
-            android:name=".DeviceAdminReceiver"
+            android:name=".admininfo.DeviceAdminReceiver"
             android:description="@string/sample_device_admin_description"
             android:label="@string/sample_device_admin"
             android:permission="android.permission.BIND_DEVICE_ADMIN">

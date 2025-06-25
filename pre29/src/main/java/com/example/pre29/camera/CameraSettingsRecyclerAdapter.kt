@@ -1,4 +1,4 @@
-package com.example.pre29
+package com.example.pre29.camera
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
