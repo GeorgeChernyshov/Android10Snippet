@@ -57,6 +57,18 @@
         android:id="@+id/WiFiP2PFragment"
         android:name="com.example.post29.wifip2p.WifiPeerToPeerFragment"
         android:label="@string/wifi_p2p_label"
-        tools:layout="@layout/fragment_wifi_p2p" />
+        tools:layout="@layout/fragment_wifi_p2p">
+
+        <action
+            android:id="@+id/action_WiFiP2PFragment_to_WiFiSuggestFragment"
+            app:destination="@id/WiFiSuggestFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/WiFiSuggestFragment"
+        android:name="com.example.post29.wifisuggest.WifiSuggestFragment"
+        android:label="@string/wifi_suggest_label"
+        tools:layout="@layout/fragment_wifi_suggest" />
 
 </navigation>

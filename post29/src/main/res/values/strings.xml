@@ -7,6 +7,7 @@
     <string name="privacy_changes_label">Top Privacy Changes</string>
     <string name="security_label">Security</string>
     <string name="wifi_p2p_label">WiFi Peer to Peer</string>
+    <string name="wifi_suggest_label">WiFi Suggest</string>
 
     <!-- button labels -->
     <string name="access_external_storage_button">Access External Storage</string>
@@ -52,4 +53,7 @@
     <string name="wifi_p2p_password_hint">Input hotspot password here</string>
     <string name="wifi_p2p_start_hotspot_hint">Press this button to start hotspot</string>
     <string name="wifi_p2p_title">Android 10 introduced new API for establishing WiFi Peer to Peer connections</string>
+    <string name="wifi_suggest_connected">You have connected to the suggested network!</string>
+    <string name="wifi_suggest_hint">You should see a notification or an alert dialog, depending on your phone version. Note that your phone isnt forced to connect to a suggested network - the decision is on OS to make</string>
+    <string name="wifi_suggest_title">Android 10 introduced new API for suggesting WiFi networks</string>
 </resources>

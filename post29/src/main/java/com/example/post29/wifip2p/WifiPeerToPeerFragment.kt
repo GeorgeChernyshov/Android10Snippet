@@ -9,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.post29.Config
+import com.example.post29.R
 import com.example.post29.databinding.FragmentWifiP2pBinding
 
 class WifiPeerToPeerFragment : Fragment() {
@@ -23,8 +26,8 @@ class WifiPeerToPeerFragment : Fragment() {
         binding = FragmentWifiP2pBinding.inflate(inflater, container, false)
 
         with(binding) {
-            wifiP2pInputSsid.setText("AndroidAP0B2F")
-            wifiP2pInputPassword.setText("yjwo6719")
+            wifiP2pInputSsid.setText(Config.WIFI_SSID)
+            wifiP2pInputPassword.setText(Config.WIFI_PASSWORD)
         }
 
         return binding.root
@@ -48,6 +51,12 @@ class WifiPeerToPeerFragment : Fragment() {
 
                     peerToPeerConnector.requestConnection(ssid, password)
                 }
+            }
+
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_WiFiP2PFragment_to_WiFiSuggestFragment
+                )
             }
         }
     }
