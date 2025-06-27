@@ -6,6 +6,7 @@
     <string name="ndk_label">NDK Changes</string>
     <string name="privacy_changes_label">Top Privacy Changes</string>
     <string name="security_label">Security</string>
+    <string name="telephony_label">Telephony</string>
     <string name="wifi_p2p_label">WiFi Peer to Peer</string>
     <string name="wifi_suggest_label">WiFi Suggest</string>
 
@@ -30,15 +31,21 @@
     <string name="error_build_serial_not_implemented">Build Serial only available after Android Oreo</string>
     <string name="error_get_uid_not_available">getConnectionOwnerUid not implemented on Android 9 and lower</string>
 
-    <!-- hints -->
+    <!-- access -->
     <string name="access_external_storage_hint">Text from the file in external storage will be here after you press the button.</string>
     <string name="access_private_media_hint">On devices with Android 9 or lower you have to give a permission to read app media files since scoped storage was not really a thing</string>
+
+    <!-- location -->
     <string name="location_permission_needed_hint">Since Android 10, you will be requested a separate permission for background location</string>
     <string name="location_permission_not_needed_hint">You shouldn\'t see any permission requests</string>
+
+    <!-- ndk -->
     <string name="ndk_bionic_literal_hint">Bionic libraries use literal paths</string>
     <string name="ndk_bionic_symbolic_hint">Bionic libraries use symbolic links as paths</string>
     <string name="ndk_system_binaries_executable">Binaries are in execute-only memory now</string>
     <string name="ndk_system_binaries_read">You can read executable binary files content</string>
+
+    <!-- security -->
     <string name="security_tls_1_3_hint">Since Android 10, TLS 1.3 is enabled by default</string>
     <string name="security_tls_cypher_suite">TLS cypher suite</string>
     <string name="security_tls_cypher_suite_custom">You should see TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 cypher suite</string>
@@ -47,6 +54,26 @@
     <string name="security_tls_establish_connection_hint">Press this button to establish TLS connection</string>
     <string name="security_tls_protocol_type">TLS protocol type</string>
     <string name="security_tls_versions_list">Supported security protocols:</string>
+
+    <!-- telephony -->
+    <string name="telephony_call_info_hint">Try calling this phone. The information about a caller should be displayed below. To make call service handle the call, please call from an unknown number</string>
+    <string name="telephony_call_info_phone_number_uri">Phone number uri: %s</string>
+    <string name="telephony_call_info_call_incoming">Call direction: incoming</string>
+    <string name="telephony_call_info_call_outgoing">Call direction: outgoing</string>
+    <string name="telephony_call_info_caller_name">Caller name: %s</string>
+    <string name="telephony_call_info_is_spam">Is spam: %s</string>
+    <string name="telephony_call_info_phone_number">Phone number: %s</string>
+    <string name="telephony_enable_button">Enable</string>
+    <string name="telephony_enable_hint">To access telephony features, please enable the app to access call screening</string>
+    <string name="telephony_redirection_enable_button">Set</string>
+    <string name="telephony_redirection_enable_hint">To access call redirection, please set the app as the call redirector</string>
+    <string name="telephony_redirection_hint_1">If you call the 0987654321 phone number, it should be immediately canceled</string>
+    <string name="telephony_redirection_hint_2">If you call the 1234567890 phone number, it should be redirected to the number you input below</string>
+    <string name="telephony_redirection_hint_3">If you call any other number, it should work as always</string>
+    <string name="telephony_redirection_number_hint">Input the number to redirect to</string>
+    <string name="telephony_spam_hint">Enter the calling phone number to mark it as spam</string>
+
+    <!-- wifi -->
     <string name="wifi_p2p_connect_to_hotspot_hint">Press this button to connect to the hotspot</string>
     <string name="wifi_p2p_hint">To test it you will need two devices. You start the hotspot on first device, and on the second one input its ssid it the field below and connect to it</string>
     <string name="wifi_p2p_input_hint">Input hotspot SSID here</string>

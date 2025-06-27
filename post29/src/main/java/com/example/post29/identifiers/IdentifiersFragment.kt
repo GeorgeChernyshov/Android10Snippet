@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.system.OsConstants
 import android.view.LayoutInflater
 import android.view.View
@@ -32,8 +34,14 @@ class IdentifiersFragment : Fragment() {
         requestPermission(Manifest.permission.READ_PHONE_STATE)
 
         with (binding) {
-            connectionUidTextView.text = getConnectionOwnerUid()
-            serialTextView.text = getBuildSerial()
+            Thread {
+                val connectionOwnerUid = getConnectionOwnerUid()
+                val serial = getBuildSerial()
+                Handler(Looper.getMainLooper()).post {
+                    connectionUidTextView.text = connectionOwnerUid
+                    serialTextView.text = serial
+                }
+            }
 
             goToNextScreenButton.setOnClickListener {
                 findNavController().navigate(

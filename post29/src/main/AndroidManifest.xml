@@ -45,6 +45,27 @@
 
         <service android:name=".pc.LocationService" />
 
+        <service android:name=".telephony.MyCallScreeningService"
+            android:permission="android.permission.BIND_SCREENING_SERVICE"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.telecom.CallScreeningService"/>
+            </intent-filter>
+
+        </service>
+
+        <service
+            android:name=".telephony.MyCallRedirectionService"
+            android:permission="android.permission.BIND_CALL_REDIRECTION_SERVICE"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.telecom.CallRedirectionService" />
+            </intent-filter>
+
+        </service>
+
     </application>
 
 </manifest>

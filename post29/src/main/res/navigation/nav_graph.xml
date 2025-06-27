@@ -69,6 +69,18 @@
         android:id="@+id/WiFiSuggestFragment"
         android:name="com.example.post29.wifisuggest.WifiSuggestFragment"
         android:label="@string/wifi_suggest_label"
-        tools:layout="@layout/fragment_wifi_suggest" />
+        tools:layout="@layout/fragment_wifi_suggest">
+
+        <action
+            android:id="@+id/action_WiFiSuggestFragment_to_TelephonyFragment"
+            app:destination="@id/TelephonyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/TelephonyFragment"
+        android:name="com.example.post29.telephony.TelephonyFragment"
+        android:label="@string/telephony_label"
+        tools:layout="@layout/fragment_telephony" />
 
 </navigation>

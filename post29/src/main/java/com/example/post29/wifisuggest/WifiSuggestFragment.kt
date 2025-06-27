@@ -13,7 +13,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.post29.Config
+import com.example.post29.R
 import com.example.post29.databinding.FragmentWifiSuggestBinding
 
 class WifiSuggestFragment : Fragment() {
@@ -32,6 +34,13 @@ class WifiSuggestFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        binding.goToNextScreenButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_WiFiSuggestFragment_to_TelephonyFragment
+            )
+        }
+
         val wifiManager = requireContext().getSystemService(
             Context.WIFI_SERVICE
         ) as WifiManager
