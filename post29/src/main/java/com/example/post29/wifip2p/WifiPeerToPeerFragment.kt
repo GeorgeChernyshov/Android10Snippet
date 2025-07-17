@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.post29.Config
@@ -53,10 +54,14 @@ class WifiPeerToPeerFragment : Fragment() {
                 }
             }
 
-            goToNextScreenButton.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_WiFiP2PFragment_to_WiFiSuggestFragment
-                )
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                goToNextScreenButton.setOnClickListener {
+                    findNavController().navigate(
+                        R.id.action_WiFiP2PFragment_to_WiFiSuggestFragment
+                    )
+                }
+            } else {
+                goToNextScreenButton.isVisible = false
             }
         }
     }
