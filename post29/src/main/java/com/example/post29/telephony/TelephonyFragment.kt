@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.post29.R
 import com.example.post29.databinding.FragmentTelephonyBinding
 
@@ -69,6 +70,12 @@ class TelephonyFragment : Fragment() {
 
             redirectionNumberEditText.doOnTextChanged { text, _, _, _ ->
                 CallRedirectionRepository.phoneNumber = text.toString()
+            }
+
+            goToNextScreenButton.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_TelephonyFragment_to_MediaFragment
+                )
             }
 
             CallScreeningRepository.callInfo

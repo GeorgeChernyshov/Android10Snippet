@@ -81,6 +81,18 @@
         android:id="@+id/TelephonyFragment"
         android:name="com.example.post29.telephony.TelephonyFragment"
         android:label="@string/telephony_label"
-        tools:layout="@layout/fragment_telephony" />
+        tools:layout="@layout/fragment_telephony">
+
+        <action
+            android:id="@+id/action_TelephonyFragment_to_MediaFragment"
+            app:destination="@id/MediaFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/MediaFragment"
+        android:name="com.example.post29.media.MediaFragment"
+        android:label="@string/media_label"
+        tools:layout="@layout/fragment_media" />
 
 </navigation>

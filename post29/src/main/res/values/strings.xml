@@ -3,6 +3,7 @@
 
     <!-- fragment labels -->
     <string name="identifiers_fragment_label">Identifiers and Data</string>
+    <string name="media_label">Media</string>
     <string name="ndk_label">NDK Changes</string>
     <string name="privacy_changes_label">Top Privacy Changes</string>
     <string name="security_label">Security</string>
@@ -17,7 +18,9 @@
     <string name="give_permission">Give permission</string>
     <string name="go_to_next_screen">Go to next Screen</string>
     <string name="launch_location_service">Launch location service</string>
+    <string name="start_capture">Start Capture</string>
     <string name="start_hotspot">Start Hotspot</string>
+    <string name="stop_capture">Stop Capture</string>
     <string name="take_photo">Take Photo</string>
 
     <!-- field labels -->
@@ -39,11 +42,25 @@
     <string name="location_permission_needed_hint">Since Android 10, you will be requested a separate permission for background location</string>
     <string name="location_permission_not_needed_hint">You shouldn\'t see any permission requests</string>
 
+    <!-- media -->
+    <string name="media_audio_capture_hint">Android 10 gives an app the ability to capture audio playback from other apps</string>
+    <string name="media_audio_capture_start_hint">Press this button to start media capture</string>
+    <string name="media_audio_sharing_hint_post29">The behavior prior to Android 10 is \"first come, first served.\" Once an app starts to capture audio, no other apps can access the audio input until the app that is capturing audio stops</string>
+    <string name="media_audio_sharing_hint_pre29">Android 10 imposes a priority scheme that can switch the input audio stream between apps while they are running</string>
+
     <!-- ndk -->
     <string name="ndk_bionic_literal_hint">Bionic libraries use literal paths</string>
     <string name="ndk_bionic_symbolic_hint">Bionic libraries use symbolic links as paths</string>
     <string name="ndk_system_binaries_executable">Binaries are in execute-only memory now</string>
     <string name="ndk_system_binaries_read">You can read executable binary files content</string>
+
+    <!-- notifications -->
+    <string name="media_notification_title">Media Notification</string>
+    <string name="media_notification_text">Your recording is playing</string>
+    <string name="notification_channel_name">Notification channel</string>
+    <string name="notification_channel_description">Notification channel description</string>
+    <string name="notification_title">My Notification</string>
+    <string name="notification_text">Notification text</string>
 
     <!-- security -->
     <string name="security_tls_1_3_hint">Since Android 10, TLS 1.3 is enabled by default</string>
