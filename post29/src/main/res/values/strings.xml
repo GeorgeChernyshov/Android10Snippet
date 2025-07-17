@@ -2,6 +2,7 @@
     <string name="app_name">Android10Snippet-post29</string>
 
     <!-- fragment labels -->
+    <string name="dark_theme_label">Dark Theme</string>
     <string name="identifiers_fragment_label">Identifiers and Data</string>
     <string name="media_label">Media</string>
     <string name="ndk_label">NDK Changes</string>
@@ -22,6 +23,13 @@
     <string name="start_hotspot">Start Hotspot</string>
     <string name="stop_capture">Stop Capture</string>
     <string name="take_photo">Take Photo</string>
+
+    <!-- dark theme -->
+    <string name="dark_theme_not_supported">Dark theme is not supported in Android 9 and below</string>
+    <string name="dark_theme_supported">Starting from Android 10, devices support dark theme. You can switch your app theme below</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_system">System</string>
 
     <!-- field labels -->
     <string name="build_serial">Build Serial</string>

@@ -3,7 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/IdentifiersFragment">
+    app:startDestination="@id/DarkThemeFragment">
+
+    <fragment
+        android:id="@+id/DarkThemeFragment"
+        android:name="com.example.post29.darktheme.DarkThemeFragment"
+        android:label="@string/dark_theme_label"
+        tools:layout="@layout/fragment_dark_theme">
+
+        <action
+            android:id="@+id/action_DarkThemeFragment_to_IdentifiersFragment"
+            app:destination="@id/IdentifiersFragment" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/IdentifiersFragment"
